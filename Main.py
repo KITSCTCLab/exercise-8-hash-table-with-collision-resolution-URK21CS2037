@@ -1,18 +1,17 @@
 import re
-
-def display_hash(hashtable) -> None:
-	for keyvalue in range(len(hashtable)):
-		cont = hashtable[keyvalue] 
-                print(keyvalue, end = " ") 
-                for element in cont:
-			print("-->", element, end = " ") 
-                print() 
+def display_hash(hashtable)->None:
+    for keyvalue in range(len(hashtable)):
+	   cont = hashtable[keyvalue] 
+            print(keyvalue, end = " ") 
+            for element in cont:
+		   print("-->", element, end = " ") 
+             print() 
 
 def Hashing(keyvalue) -> int:
-	return keyvalue % len(HashTable)
+    return keyvalue % len(HashTable)
 
 def insert(Hashtable, keyvalue, value) -> None:
-	Hashtable[Hashing(keyvalue)].append(value) 
+    Hashtable[Hashing(keyvalue)].append(value) 
 
 
 # Do not edit the following code
