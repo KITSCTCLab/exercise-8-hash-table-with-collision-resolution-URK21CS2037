@@ -1,17 +1,20 @@
 import re
-def display_hash(hashtable)->None:
+
+def display_hash(hashtable) -> None:
 	for keyvalue in range(len(hashtable)):
 		cont = hashtable[keyvalue]
 		print(keyvalue, end = " ")
 		for element in cont:
-			print("-->", element, end = " ") 
-                print() 
+			print("-->", element, end = " ")
+		print()
 
 def Hashing(keyvalue) -> int:
 	return keyvalue % len(HashTable)
 
 def insert(Hashtable, keyvalue, value) -> None:
-	Hashtable[Hashing(keyvalue)].append(value) 
+	# Write your code here
+	Hashtable[Hashing(keyvalue)].append(value)
+
 
 
 # Do not edit the following code
@@ -25,4 +28,5 @@ for item in re.split('], |].', input_data):
   data = item.split(', ')
   if len(data) > 1:
     insert(HashTable, int(data[0]), data[1])
-    display_hash (HashTable)
+
+display_hash (HashTable)
